@@ -1,0 +1,8 @@
+# Ignora los archivos provenientes de Library
+Library/
+
+# Ignora los archivos provenientes de Temp
+Temp/
+
+# Ignora los archivos provenientes de logs
+Logs/
