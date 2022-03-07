@@ -45,7 +45,10 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            _myHook.StartGrapple();
+            if (_myGroundcheck.IsGrounded())
+            {
+                _myHook.StartGrapple();
+            }
         }
 
         _direction.Normalize();

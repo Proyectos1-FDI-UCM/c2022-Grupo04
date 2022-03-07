@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 7561599054378749713}
   - component: {fileID: 7561599054378749716}
   - component: {fileID: 7561599054378749717}
+  - component: {fileID: 3718867214780927570}
   m_Layer: 2
   m_Name: Acid
   m_TagString: Untagged
@@ -144,7 +145,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.20876233, g: 0.9528302, b: 0.059926324, a: 1}
   m_FlipX: 0
@@ -193,7 +194,7 @@ BuoyancyEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 126
+    m_Bits: 186
   m_SurfaceLevel: 0.54
   m_Density: 2
   m_LinearDrag: 4
@@ -201,6 +202,18 @@ BuoyancyEffector2D:
   m_FlowAngle: 0
   m_FlowMagnitude: 0
   m_FlowVariation: 0
+--- !u!114 &3718867214780927570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561599054378749712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1e42f9acce0b844b0252e7a631681a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7561599054420592677
 GameObject:
   m_ObjectHideFlags: 0
