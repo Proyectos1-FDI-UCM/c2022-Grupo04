@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _player;
     private InputManager _playerInput;
+    [SerializeField]
+    private GameObject _scenesManager;
+    private ScenesManager _myScenesManager;
     static private GameManager _instance;
     [SerializeField]
     private GameObject _canvas;
@@ -67,6 +70,28 @@ public class GameManager : MonoBehaviour
         m_currentLevel = PlayerPrefs.GetInt("level", m_currentLevel);
         m_tornilloCount = PlayerPrefs.GetInt("tornillos", m_tornilloCount);
     }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Continue()
+    {
+        Time.timeScale = 1;
+    }
+    public void MainMenu() //no se si hay que hacer algo aqui de player prefs o algo 
+    {
+        Time.timeScale = 1;
+        _myScenesManager.LoadScene("Main_Menu");
+    }
+    public void Quit()   //igual con lo de player prefs
+    {
+        Application.Quit();
+    }
+    public void StartGame()
+    {
+        _myScenesManager.LoadScene("Stranded_Away");
+    }
     #endregion
 
     #region parameters
@@ -85,6 +110,7 @@ public class GameManager : MonoBehaviour
         _camera = Camera.main.gameObject;
         _cameraMovement = _camera.GetComponent<CameraMovement>();
         _playerInput = _player.GetComponent<InputManager>();
+        _myScenesManager = _scenesManager.GetComponent<ScenesManager>();
 
         _levelText = _levelObject.GetComponent<Text>();
         _levelText.text = "Level: " + m_currentLevel;

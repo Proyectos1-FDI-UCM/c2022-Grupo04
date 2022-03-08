@@ -354,27 +354,11 @@ RectTransform:
   m_LocalScale: {x: 2.4494, y: 2.4494, z: 2.4494}
   m_Children: []
   m_Father: {fileID: 103845814}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -56}
-=======
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2, y: -72}
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2, y: -72}
->>>>>>> parent of e245e4c (UI Main Scene)
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108983868
@@ -420,27 +404,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 108983869}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
-<<<<<<< HEAD
-      m_Calls:
-      - m_Target: {fileID: 412030681}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Controls
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-=======
       m_Calls: []
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
-      m_Calls: []
->>>>>>> parent of e245e4c (UI Main Scene)
 --- !u!114 &108983869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,27 +651,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 392539950}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
-<<<<<<< HEAD
-      m_Calls:
-      - m_Target: {fileID: 412030681}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Continue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-=======
       m_Calls: []
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
-      m_Calls: []
->>>>>>> parent of e245e4c (UI Main Scene)
 --- !u!114 &392539950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,20 +720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 236285443}
-<<<<<<< HEAD
-<<<<<<< HEAD
   _scenesManager: {fileID: 0}
   _canvas: {fileID: 0}
-<<<<<<< HEAD
->>>>>>> ca54b7c3d877f0beffce883a13b8e207efcf6ff5
->>>>>>> Stashed changes
-=======
-  _canvas: {fileID: 1637866818}
->>>>>>> parent of ca54b7c (Cambios scripts)
-=======
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
->>>>>>> parent of e245e4c (UI Main Scene)
   _posCamera:
   - {fileID: 1008149893}
   - {fileID: 1503537917}
@@ -954,11 +886,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of e245e4c (UI Main Scene)
 --- !u!1 &527841463
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,21 +980,13 @@ RectTransform:
   - {fileID: 103845814}
   - {fileID: 2077986632}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 15
-=======
   m_RootOrder: 17
->>>>>>> parent of e245e4c (UI Main Scene)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
->>>>>>> parent of e245e4c (UI Main Scene)
 --- !u!1 &741763411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,15 +1022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: -9, y: -159}
-=======
   m_AnchoredPosition: {x: -2, y: -159}
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
-  m_AnchoredPosition: {x: -2, y: -159}
->>>>>>> parent of e245e4c (UI Main Scene)
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741763413
@@ -1157,27 +1068,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 741763414}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
-<<<<<<< HEAD
-      m_Calls:
-      - m_Target: {fileID: 412030681}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: Quit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-=======
       m_Calls: []
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
-      m_Calls: []
->>>>>>> parent of e245e4c (UI Main Scene)
 --- !u!114 &741763414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1519,7 +1410,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!61 &844177749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1621,8 +1511,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946063794}
   m_CullTransparentMesh: 1
-=======
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
 --- !u!4 &1008149893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5210430209148336615, guid: 32e9de7cc916a6342a1275f88715480e, type: 3}
@@ -1857,27 +1745,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1260618471}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< HEAD
-<<<<<<< HEAD
-      m_Calls:
-      - m_Target: {fileID: 412030681}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: MainMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-=======
       m_Calls: []
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
-=======
-      m_Calls: []
->>>>>>> parent of e245e4c (UI Main Scene)
 --- !u!114 &1260618471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2226,7 +2094,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b249a7c05fb4e547b42d147056ef9dd, type: 3}
-<<<<<<< HEAD
 --- !u!1 &1637866818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1637866819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2259,9 +2126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee12e45f15ea1694cbcfd2d5a2a47f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowTime: {fileID: 2049602103}
-  ShowTornillos: {fileID: 2011564628}
-  _imagentornillo: {fileID: 21300000, guid: aab61e4fa2259c44697ead7981d22a61, type: 3}
+  ShowTime: {fileID: 0}
+  ShowTornillos: {fileID: 0}
+  _imagentornillo: {fileID: 0}
 --- !u!114 &1637866820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,8 +2212,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-=======
->>>>>>> parent of f7f7f13 (UI y Scene Managers)
 --- !u!1001 &1776738484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2736,7 +2601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2096000909
 SpriteRenderer:
   m_ObjectHideFlags: 0
