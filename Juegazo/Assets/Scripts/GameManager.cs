@@ -94,11 +94,14 @@ public class GameManager : MonoBehaviour
 <<<<<<< HEAD
 =======
     }
+<<<<<<< HEAD
     private void Timer()
     {
         Timeleft -= Time.deltaTime;
 >>>>>>> parent of fb9b243 (UI and Scene Management)
     }
+=======
+>>>>>>> parent of d2c7d14 (Game Manager, Scripts y prefabs)
     #endregion
 
     #region parameters
