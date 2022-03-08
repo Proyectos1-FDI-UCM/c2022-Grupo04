@@ -91,6 +91,13 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         _myScenesManager.LoadScene("Stranded_Away");
+<<<<<<< HEAD
+=======
+    }
+    private void Timer()
+    {
+        Timeleft -= Time.deltaTime;
+>>>>>>> parent of fb9b243 (UI and Scene Management)
     }
     #endregion
 
