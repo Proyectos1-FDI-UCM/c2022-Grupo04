@@ -66,9 +66,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerLifeComponent.cs" />
     <Compile Include="Assets\Scripts\Camera\StopCamera.cs" />
     <Compile Include="Assets\Scripts\BeginLevelArea.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Damage.cs" />
     <Compile Include="Assets\Scripts\enemy2\EnemyFollow.cs" />
     <Compile Include="Assets\Scripts\Objects\ContinuousButton.cs" />
+    <Compile Include="Assets\Scripts\ScenesManager.cs" />
     <Compile Include="Assets\Scripts\Objects\BeltMovement.cs" />
     <Compile Include="Assets\Scripts\Objects\PlataformStateManager.cs" />
     <Compile Include="Assets\Scripts\Objects\BeltStateManager.cs" />
