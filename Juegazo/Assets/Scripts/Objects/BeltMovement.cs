@@ -12,9 +12,7 @@ public class BeltMovement : MonoBehaviour
     #region methods
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<GroundCheck>() != null)
-            collision.collider.GetComponentInParent<Rigidbody2D>().velocity = m_direction * Vector2.right * m_speed * Time.deltaTime;
-        if (collision.collider.GetComponent<EnemyThere>() != null)
+        if (collision.collider.GetComponent<Rigidbody2D>() != null)
             collision.rigidbody.velocity = m_direction * Vector2.right * m_speed * Time.deltaTime;
     }
     #endregion

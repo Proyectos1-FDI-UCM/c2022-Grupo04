@@ -672,6 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 236285443}
+<<<<<<< HEAD
   _scenesManager: {fileID: 0}
 <<<<<<< Updated upstream
   _canvas: {fileID: 0}
@@ -682,6 +683,9 @@ MonoBehaviour:
   _canvas: {fileID: 0}
 >>>>>>> ca54b7c3d877f0beffce883a13b8e207efcf6ff5
 >>>>>>> Stashed changes
+=======
+  _canvas: {fileID: 1637866818}
+>>>>>>> parent of ca54b7c (Cambios scripts)
   _posCamera:
   - {fileID: 1008149893}
   - {fileID: 1503537917}
@@ -1110,10 +1114,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 674856279849470153, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 674856279849470157, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: m_Name
       value: p_MR1-k
@@ -1452,7 +1452,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91db82aa540f4064282cf10d1468362f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
