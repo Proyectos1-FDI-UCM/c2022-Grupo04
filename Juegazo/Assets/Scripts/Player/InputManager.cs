@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     private Hook _myHook;
     private RobotBox _robotBox;
     private GroundCheck _myGroundcheck;
-    private float _characterSpeed = 5f;
+    private UIManager _myUIManager;
     #endregion
 
     // Start is called before the first frame update
@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
         _myHook = GetComponent<Hook>();
         _robotBox = GetComponent<RobotBox>();
         _myGroundcheck = GetComponentInChildren<GroundCheck>();
+        _myUIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -42,13 +43,16 @@ public class InputManager : MonoBehaviour
                 _robotBox.Box();
             }
         }
-
         if (Input.GetMouseButtonDown(0))
         {
             if (_myGroundcheck.IsGrounded())
             {
                 _myHook.StartGrapple();
             }
+        }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            _myUIManager.Pause();
         }
 
         _direction.Normalize();
