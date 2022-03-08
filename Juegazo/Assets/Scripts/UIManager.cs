@@ -13,48 +13,9 @@ public class UIManager : MonoBehaviour
     private GameObject ShowTornillos;
     private Text _tornillosText;
     [SerializeField]
-    private Image _imagentornillo;
+    private Sprite _imagentornillo;
     #endregion
-
-    #region references
-    [SerializeField]
-    public GameObject _myPanel;
-    [SerializeField]
-    private Canvas _myCanvas;
-    [SerializeField]
-    private Image _myControls;
-    #endregion
-
     #region methods
-    public void Pause()
-    {
-        _myPanel.SetActive(true);
-        GameManager.Instance.Pause();
-    }
-    public void Continue()
-    {
-        _myPanel.SetActive(false);
-        GameManager.Instance.Continue();
-    }
-    public void MainMenu()
-    {
-        _myPanel.SetActive(false);           //probably no hace falta pero idk
-        GameManager.Instance.MainMenu();
-    }
-    public void Quit()
-    {
-        _myPanel.SetActive(false);
-        GameManager.Instance.Quit();
-    }
-    public void StartGame()
-    {
-        GameManager.Instance.StartGame();
-    }
-    public void Controls()
-    {
-        _myPanel.SetActive(false);
-        _myControls.enabled = true;
-    }
     public void showTimer(float Timeleft)
     {
         _timeText.text = "Time: " + (int)Timeleft;
@@ -69,17 +30,11 @@ public class UIManager : MonoBehaviour
     {
         _timeText = ShowTime.GetComponent<Text>();
         _tornillosText = ShowTornillos.GetComponent<Text>();
-        _myControls.enabled = false;
-        _myPanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && _myControls.enabled == true)
-        {
-            _myPanel.SetActive(true);
-            _myControls.enabled = false;
-        }
+        
     }
 }
