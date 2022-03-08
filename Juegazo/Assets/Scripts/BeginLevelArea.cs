@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class BeginLevelArea : MonoBehaviour
 {
+    #region references
+    [SerializeField]
+    private GameObject _pared;
+
+    #endregion
+
     #region methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,6 +17,7 @@ public class BeginLevelArea : MonoBehaviour
         {
             collision.GetComponent<InputManager>().enabled = true;
             GameManager.Instance.InicioNivel();
+            _pared.SetActive(true);
         }
     }
     #endregion

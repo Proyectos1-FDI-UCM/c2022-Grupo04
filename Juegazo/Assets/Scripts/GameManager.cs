@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
     private InputManager _playerInput;
     static private GameManager _instance;
+    [SerializeField]
+    private GameObject _canvas;
+    private UIManager _myUIManager;
+    private Tornillos _tornillos;
     static public GameManager Instance
     {
         get
@@ -55,12 +59,22 @@ public class GameManager : MonoBehaviour
     public void Save()
     {
         PlayerPrefs.SetInt("level", m_currentLevel);
+        PlayerPrefs.SetInt("tornillos", m_tornilloCount);
     }
 
     private void Load()
     {
         m_currentLevel = PlayerPrefs.GetInt("level", m_currentLevel);
+        m_tornilloCount = PlayerPrefs.GetInt("tornillos", m_tornilloCount);
     }
+    #endregion
+
+    #region parameters
+    [SerializeField]
+    private float InitialTime;
+    private float Timeleft;
+    [HideInInspector]
+    public int m_tornilloCount = 0;
     #endregion
 
     // Start is called before the first frame update
@@ -76,6 +90,12 @@ public class GameManager : MonoBehaviour
         _levelText.text = "Level: " + m_currentLevel;
         _player.transform.position = _beginLevelArea[m_currentLevel - 1].position;
         _camera.transform.position = _posCamera[m_currentLevel - 1].position;
+
+        //tornillos y tiempo
+        Timeleft = InitialTime;
+        _myUIManager = _canvas.GetComponent<UIManager>();
+        _tornillos = _canvas.GetComponent<Tornillos>();
+        _instance = this;
     }
     public void InicioNivel()
     {
@@ -87,5 +107,16 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Load();
+    }
+    private void Update()
+    {
+        Timeleft -= Time.deltaTime;
+        _myUIManager.showTimer(Timeleft);
+        if (Timeleft <= 0)
+        {
+            //_player.Die();
+            Timeleft = InitialTime;
+        }
+        _myUIManager.showTornillos(m_tornilloCount);
     }
 }
