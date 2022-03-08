@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Main_Menu.unity
     guid: 6e1c9b810cc6e974c82f2b1cd30195fd
   - enabled: 1
+=======
+>>>>>>> parent of f7f7f13 (UI y Scene Managers)
     path: Assets/Scenes/Stranded_Away.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

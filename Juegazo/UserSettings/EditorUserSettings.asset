@@ -10,9 +10,12 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c6c040416162e292c19113a28047df7ee3d2cfb
+<<<<<<< HEAD
       flags: 0
     RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c72111f1927072926337e38271427fb
+=======
+>>>>>>> parent of f7f7f13 (UI y Scene Managers)
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
