@@ -89,13 +89,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         _myScenesManager.LoadScene("Main_Menu");
     }
+    public void LoadGame()
+    {
+        //Aqui lo de cargar la partida guardada idk
+    }
     public void Quit()   //igual con lo de player prefs
     {
         Application.Quit();
     }
     public void StartGame()
     {
-        _myScenesManager.LoadScene("Stranded_Away");
+        Debug.Log("startgame");
+        SceneManager.LoadScene(0);
     }
     private void Timer()
     {

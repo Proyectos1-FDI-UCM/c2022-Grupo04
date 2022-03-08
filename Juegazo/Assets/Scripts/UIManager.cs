@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
     private GameObject ShowTornillos;
     private Text _tornillosText;
     [SerializeField]
-    private Sprite _imagentornillo;
+    private Image _imagentornillo;
     #endregion
 
     #region references
@@ -22,7 +22,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Canvas _myCanvas;
     [SerializeField]
-    private Image _myImage;
+    private Image _myControls;
     #endregion
 
     #region methods
@@ -53,7 +53,7 @@ public class UIManager : MonoBehaviour
     public void Controls()
     {
         _myPanel.SetActive(false);
-        _myImage.enabled = true;
+        _myControls.enabled = true;
     }
     public void showTimer(float Timeleft)
     {
@@ -69,13 +69,17 @@ public class UIManager : MonoBehaviour
     {
         _timeText = ShowTime.GetComponent<Text>();
         _tornillosText = ShowTornillos.GetComponent<Text>();
-        _myImage.enabled = false;
+        _myControls.enabled = false;
         _myPanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0) && _myControls.enabled == true)
+        {
+            _myPanel.SetActive(true);
+            _myControls.enabled = false;
+        }
     }
 }

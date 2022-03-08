@@ -8,11 +8,12 @@ public class PlayerLifeComponent : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.GetComponent<EnemyLifeComponent>() != null || collision.collider.GetComponent<Damage>() != null)
-            GameManager.Instance.OnPlayerDies();
+            Die();
     }
 
     public void Die()
     {
+        GameManager.Instance.OnPlayerDies();
         Destroy(gameObject);
     }
     #endregion
