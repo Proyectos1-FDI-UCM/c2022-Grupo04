@@ -18,7 +18,7 @@ public class ContinuousButton : MonoBehaviour
     #region methods
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.GetComponent<Rigidbody2D>() != null)
+        if(collision.collider.GetComponent<EnemyThere>() != null)
         {
             if (_type == ButtonType.Belt)
             {
@@ -35,7 +35,7 @@ public class ContinuousButton : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.GetComponent<Rigidbody2D>() != null)
+        if (collision.collider.GetComponent<EnemyThere>() != null)
         {
             if (_type == ButtonType.Belt)
             {

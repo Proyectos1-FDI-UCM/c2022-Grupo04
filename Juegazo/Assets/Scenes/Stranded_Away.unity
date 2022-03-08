@@ -746,6 +746,7 @@ MonoBehaviour:
   - {fileID: 0}
   m_currentLevel: 1
   _levelObject: {fileID: 2077986631}
+  m_level: 0
   InitialTime: 0
   m_tornilloCount: 0
 --- !u!4 &511514567
@@ -2113,7 +2114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1637866819
 MonoBehaviour:
   m_ObjectHideFlags: 0

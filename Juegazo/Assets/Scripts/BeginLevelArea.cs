@@ -18,6 +18,7 @@ public class BeginLevelArea : MonoBehaviour
             collision.GetComponent<InputManager>().enabled = true;
             GameManager.Instance.InicioNivel();
             _pared.SetActive(true);
+            GameManager.Instance.m_level = true;
         }
     }
     #endregion

@@ -11,10 +11,9 @@ public class PlayerLifeComponent : MonoBehaviour
             GameManager.Instance.OnPlayerDies();
     }
 
-    private void Die()
+    public void Die()
     {
         Destroy(gameObject);
-
     }
     #endregion
 }

@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     private Text _levelText;
     [SerializeField]
     private GameObject _levelObject;
+    [HideInInspector]
+    public bool m_level;
     #endregion
 
     #region methods
@@ -52,6 +54,9 @@ public class GameManager : MonoBehaviour
         _playerInput.enabled = false;
         _player.GetComponent<CharacterMovement>().SetDirection(new Vector2(1, 0));
         _levelText.text = "Level: " + m_currentLevel;
+
+        m_level = false;
+        Timeleft = InitialTime;
     }
 
     public void OnPlayerDies()
@@ -92,6 +97,10 @@ public class GameManager : MonoBehaviour
     {
         _myScenesManager.LoadScene("Stranded_Away");
     }
+    private void Timer()
+    {
+        Timeleft -= Time.deltaTime;
+    }
     #endregion
 
     #region parameters
@@ -121,7 +130,8 @@ public class GameManager : MonoBehaviour
         Timeleft = InitialTime;
         _myUIManager = _canvas.GetComponent<UIManager>();
         _tornillos = _canvas.GetComponent<Tornillos>();
-        _instance = this;
+
+        m_level = true;
     }
     public void InicioNivel()
     {
@@ -136,11 +146,12 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Timeleft -= Time.deltaTime;
+        if (m_level) Timer();
+
         _myUIManager.showTimer(Timeleft);
         if (Timeleft <= 0)
         {
-            //_player.Die();
+            _player.GetComponent<PlayerLifeComponent>().Die();
             Timeleft = InitialTime;
         }
         _myUIManager.showTornillos(m_tornilloCount);
