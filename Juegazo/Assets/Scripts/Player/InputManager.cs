@@ -52,7 +52,7 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Escape))
         {
-            _myUIManager.Pause();
+            //_myUIManager.Pause();
         }
 
         _direction.Normalize();
