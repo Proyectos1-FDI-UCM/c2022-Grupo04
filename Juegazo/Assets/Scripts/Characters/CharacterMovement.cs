@@ -9,6 +9,8 @@ public class CharacterMovement : MonoBehaviour
     private float _movementSpeed = 1.0f;
     [SerializeField]
     private float _jumpForce = 5.0f;
+    [HideInInspector]
+    public Vector2 m_JumpVector;
     #endregion
 
     #region properties
@@ -31,7 +33,10 @@ public class CharacterMovement : MonoBehaviour
     public void JumpRequest()
     {
         if (_myGroundCheck.IsGrounded())
-            _myRigidBody.velocity = new Vector2(_myRigidBody.velocity.x, _jumpForce);
+        {
+            m_JumpVector = new Vector2(_myRigidBody.velocity.x, _jumpForce);
+            _myRigidBody.velocity = m_JumpVector;
+        }
     }
     #endregion 
 

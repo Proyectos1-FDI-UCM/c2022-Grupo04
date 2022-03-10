@@ -8,7 +8,11 @@ public class StopCamera : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<CameraMovement>() != null)
+        {
             collision.GetComponent<CameraMovement>().enabled = false;
+            GameManager.Instance.m_level = true;
+            collision.transform.position = transform.position;
+        }
     }
     #endregion
 }

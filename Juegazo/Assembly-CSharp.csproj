@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DAA605C8-54FD-4D69-4624-C916CF4367AD}</ProjectGuid>
+    <ProjectGuid>{497F248F-F724-9123-C082-97172478756D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Player\Hook.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLifeComponent.cs" />
     <Compile Include="Assets\Scripts\Camera\StopCamera.cs" />
+    <Compile Include="Assets\Scripts\Tornillos.cs" />
     <Compile Include="Assets\Scripts\BeginLevelArea.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Damage.cs" />
@@ -83,11 +84,7 @@
     <Compile Include="Assets\Scripts\Player\InputManager.cs" />
     <Compile Include="Assets\Scripts\EndLevelArea.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-<<<<<<< HEAD
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\Tornillos.cs" />
-=======
->>>>>>> parent of fb9b243 (UI and Scene Management)
+    <Compile Include="Assets\Scripts\UIManager2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -36,14 +36,15 @@ public class GameManager : MonoBehaviour
     private Transform[] _beginLevelArea = new Transform[10];
     [HideInInspector]
     public int m_currentLevel = 1;
-    private Text _levelText;
-    [SerializeField]
-    private GameObject _levelObject;
+    [HideInInspector]
+    public bool m_level;
     #endregion
 
     #region methods
     public void ChangeLevel()
     {
+        m_level = false;
+
         Vector2 cameraDirection = _posCamera[m_currentLevel - 1].position - _posCamera[m_currentLevel - 2].position;
         cameraDirection.Normalize();
         _cameraMovement.enabled = true;
@@ -51,12 +52,11 @@ public class GameManager : MonoBehaviour
 
         _playerInput.enabled = false;
         _player.GetComponent<CharacterMovement>().SetDirection(new Vector2(1, 0));
-        _levelText.text = "Level: " + m_currentLevel;
     }
 
     public void OnPlayerDies()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Save()
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("tornillos", m_tornilloCount);
     }
 
-    private void Load()
+    public void Load()
     {
         m_currentLevel = PlayerPrefs.GetInt("level", m_currentLevel);
         m_tornilloCount = PlayerPrefs.GetInt("tornillos", m_tornilloCount);
@@ -90,18 +90,22 @@ public class GameManager : MonoBehaviour
     }
     public void StartGame()
     {
-        _myScenesManager.LoadScene("Stranded_Away");
-<<<<<<< HEAD
-=======
+        PlayerPrefs.SetInt("level", 1);
+        PlayerPrefs.SetInt("tornillos", 0);
+        SceneManager.LoadScene(1);
     }
-<<<<<<< HEAD
+
     private void Timer()
     {
         Timeleft -= Time.deltaTime;
->>>>>>> parent of fb9b243 (UI and Scene Management)
     }
-=======
->>>>>>> parent of d2c7d14 (Game Manager, Scripts y prefabs)
+    public void InicioNivel()
+    {
+        Save();
+        _myUIManager.showLevel(m_currentLevel);
+        Timeleft = InitialTime;
+    }
+
     #endregion
 
     #region parameters
@@ -122,8 +126,6 @@ public class GameManager : MonoBehaviour
         _playerInput = _player.GetComponent<InputManager>();
         _myScenesManager = _scenesManager.GetComponent<ScenesManager>();
 
-        _levelText = _levelObject.GetComponent<Text>();
-        _levelText.text = "Level: " + m_currentLevel;
         _player.transform.position = _beginLevelArea[m_currentLevel - 1].position;
         _camera.transform.position = _posCamera[m_currentLevel - 1].position;
 
@@ -131,13 +133,6 @@ public class GameManager : MonoBehaviour
         Timeleft = InitialTime;
         _myUIManager = _canvas.GetComponent<UIManager>();
         _tornillos = _canvas.GetComponent<Tornillos>();
-        _instance = this;
-    }
-    public void InicioNivel()
-    {
-        Save();
-        _levelText.text = "Level: " + m_currentLevel;
-
     }
 
     private void Awake()
@@ -146,13 +141,17 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Timeleft -= Time.deltaTime;
-        _myUIManager.showTimer(Timeleft);
-        if (Timeleft <= 0)
+        if (m_level)
         {
-            //_player.Die();
-            Timeleft = InitialTime;
+            Timer();
+
+            _myUIManager.showTimer(Timeleft);
+            if (Timeleft <= 0)
+            {
+                _player.GetComponent<PlayerLifeComponent>().Die();
+                Timeleft = InitialTime;
+            }
+            _myUIManager.showTornillos(m_tornilloCount);
         }
-        _myUIManager.showTornillos(m_tornilloCount);
     }
 }

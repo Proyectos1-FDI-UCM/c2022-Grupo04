@@ -9,6 +9,8 @@ public class InputManager : MonoBehaviour
     private Hook _myHook;
     private RobotBox _robotBox;
     private GroundCheck _myGroundcheck;
+    [SerializeField]
+    private GameObject UIManager;
     private UIManager _myUIManager;
     #endregion
 
@@ -19,7 +21,7 @@ public class InputManager : MonoBehaviour
         _myHook = GetComponent<Hook>();
         _robotBox = GetComponent<RobotBox>();
         _myGroundcheck = GetComponentInChildren<GroundCheck>();
-        _myUIManager = GameObject.Find("UIManager").GetComponent<UIManager>();
+        _myUIManager = UIManager.GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
             _direction.x = 1.0f;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             _movementComponent.JumpRequest();
         }
@@ -52,7 +54,7 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Escape))
         {
-            //_myUIManager.Pause();
+            _myUIManager.Pause();
         }
 
         _direction.Normalize();

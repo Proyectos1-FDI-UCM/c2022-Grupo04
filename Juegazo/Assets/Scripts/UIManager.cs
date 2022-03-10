@@ -13,11 +13,11 @@ public class UIManager : MonoBehaviour
     private GameObject ShowTornillos;
     private Text _tornillosText;
     [SerializeField]
-    private Sprite _imagentornillo;
+    private Image _imagentornillo;
+    [SerializeField]
+    private GameObject _levelObject;
+    private Text _levelText;
     #endregion
-<<<<<<< HEAD
-    #region methods
-=======
 
     #region references
     [SerializeField]
@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Canvas _myCanvas;
     [SerializeField]
-    private Image _myImage;
+    private Image _myControls;
     #endregion
 
     #region methods
@@ -56,9 +56,8 @@ public class UIManager : MonoBehaviour
     public void Controls()
     {
         _myPanel.SetActive(false);
-        _myImage.enabled = true;
+        _myControls.enabled = true;
     }
->>>>>>> parent of fb9b243 (UI and Scene Management)
     public void showTimer(float Timeleft)
     {
         _timeText.text = "Time: " + (int)Timeleft;
@@ -67,22 +66,29 @@ public class UIManager : MonoBehaviour
     {
         _tornillosText.text = "x" + tornillocount;
     }
+
+    public void showLevel(int level)
+    {
+        _levelText.text = "Level: " + level;
+    }
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         _timeText = ShowTime.GetComponent<Text>();
         _tornillosText = ShowTornillos.GetComponent<Text>();
-<<<<<<< HEAD
-=======
-        _myImage.enabled = false;
+        _myControls.enabled = false;
         _myPanel.SetActive(false);
->>>>>>> parent of fb9b243 (UI and Scene Management)
+        _levelText = _levelObject.GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0) && _myControls.enabled == true)
+        {
+            _myPanel.SetActive(true);
+            _myControls.enabled = false;
+        }
     }
 }
