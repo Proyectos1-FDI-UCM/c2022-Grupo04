@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _canvas;
     private UIManager _myUIManager;
-    private Tornillos _tornillos;
     static public GameManager Instance
     {
         get
@@ -132,7 +131,6 @@ public class GameManager : MonoBehaviour
         //tornillos y tiempo
         Timeleft = InitialTime;
         _myUIManager = _canvas.GetComponent<UIManager>();
-        _tornillos = _canvas.GetComponent<Tornillos>();
     }
 
     private void Awake()
