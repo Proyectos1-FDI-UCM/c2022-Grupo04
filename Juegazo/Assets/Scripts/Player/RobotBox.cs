@@ -14,6 +14,7 @@ public class RobotBox : MonoBehaviour
 
     #region reference
     private Transform _myTransfrom;
+    private GroundCheck _myGroundCheck;
     #endregion
 
     #region parameters
@@ -25,23 +26,26 @@ public class RobotBox : MonoBehaviour
     // Instantiate a box when we press space key
     public void Box()
     {
-        GameObject newObject = Instantiate(myBox, _boxSpawnPos.position, _myTransfrom.rotation) as GameObject;
-        _listOfBoxes.Add(newObject);
-        boxNum++;
-        if(boxNum == boxMax)
+        if (_myGroundCheck.IsGrounded())
         {
-            GameObject gameObjectToRemove = _listOfBoxes[0];
-            _listOfBoxes.Remove(gameObjectToRemove);
-            Destroy(gameObjectToRemove);
-            boxNum--;
-        }
-        
+            GameObject newObject = Instantiate(myBox, _boxSpawnPos.position, _myTransfrom.rotation) as GameObject; //mejor con array activando y desactivando para no perder memoria
+            _listOfBoxes.Add(newObject);
+            boxNum++;
+            if(boxNum == boxMax)
+            {
+                GameObject gameObjectToRemove = _listOfBoxes[0];
+                _listOfBoxes.Remove(gameObjectToRemove);
+                Destroy(gameObjectToRemove);
+                boxNum--;
+            }
+        } 
     }
    
 
     void Start()
     {
         _myTransfrom = transform;
+        _myGroundCheck = GetComponentInChildren<GroundCheck>();
     }
 
     private void Awake()

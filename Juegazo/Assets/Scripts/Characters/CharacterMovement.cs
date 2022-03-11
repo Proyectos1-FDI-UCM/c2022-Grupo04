@@ -51,7 +51,7 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _myTransform.Translate(_movementSpeed * Time.deltaTime * m_movementDirection);
+        _myTransform.Translate(_movementSpeed * Time.deltaTime * m_movementDirection); //usar rigidbody para mover a los personajes(+eficiente, no vibra al chocar)
         if (m_movementDirection.x > 0) _myTransform.localScale = new Vector2(1f, 1f);
         else if (m_movementDirection.x < 0f) _myTransform.localScale = new Vector2(-1f, 1f);
     }

@@ -40,17 +40,11 @@ public class InputManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (_myGroundcheck.IsGrounded())
-            {
-                _robotBox.Box();
-            }
+            _robotBox.Box();
         }
         if (Input.GetMouseButtonDown(0))
-        {
-            if (_myGroundcheck.IsGrounded())
-            {
-                _myHook.StartGrapple();
-            }
+        {            
+            _myHook.StartGrapple();
         }
         if (Input.GetKey(KeyCode.Escape))
         {

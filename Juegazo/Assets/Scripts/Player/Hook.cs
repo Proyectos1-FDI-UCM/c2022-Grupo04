@@ -9,6 +9,7 @@ public class Hook : MonoBehaviour
     private Rigidbody2D _myRigidBody;
     private LayerMask _myLayer;
     private InputManager _myInput;
+    private GroundCheck _myGroundCheck;
     #endregion
 
     #region properties
@@ -26,12 +27,12 @@ public class Hook : MonoBehaviour
         _myLayer = LayerMask.GetMask("Grabbing");
         _myRigidBody = GetComponent<Rigidbody2D>();
         _myInput = GetComponent<InputManager>();
+        _myGroundCheck = GetComponentInChildren<GroundCheck>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (moving)
         {
             _myInput.enabled = false;
@@ -52,18 +53,21 @@ public class Hook : MonoBehaviour
 
     public void StartGrapple()
     {
-        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        direction.Normalize();
-
-        //Raycast (origin, direction, maxDistance, LayerMask, queryTriggerInteraction); devuelve un booleano
-        RaycastHit2D hit = Physics2D.Raycast(_myTransform.position, direction, maxDistance, _myLayer);
-        Debug.DrawRay(_myTransform.position, direction, Color.gray, 5f);
-        Debug.Log("RayCast lanzado");
-        if (hit.collider != null)
+        if (_myGroundCheck.IsGrounded())
         {
-            Debug.Log("Tocado");
-            target = hit.transform.position;
-            moving = true;
+            Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            direction.Normalize();
+
+            //Raycast (origin, direction, maxDistance, LayerMask, queryTriggerInteraction); devuelve un booleano
+            RaycastHit2D hit = Physics2D.Raycast(_myTransform.position, direction, maxDistance, _myLayer);
+            Debug.DrawRay(_myTransform.position, direction, Color.gray, 5f);
+            Debug.Log("RayCast lanzado");
+            if (hit.collider != null)
+            {
+                Debug.Log("Tocado");
+                target = hit.transform.position;
+                moving = true;
+            }
         }
     }
 }
