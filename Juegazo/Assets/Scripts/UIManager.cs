@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    #region paramters
+    #region parameters
     [SerializeField]
     private GameObject ShowTime;
     private Text _timeText;
@@ -17,6 +17,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject _levelObject;
     private Text _levelText;
+    [SerializeField]
+    private GameObject Progress;
+    private Slider _progressBar;
     #endregion
 
     #region references
@@ -66,6 +69,10 @@ public class UIManager : MonoBehaviour
     {
         _tornillosText.text = "x" + tornillocount;
     }
+    public void showProgress(int tornillocount)
+    {
+        _progressBar.value = tornillocount;
+    }
 
     public void showLevel(int level)
     {
@@ -80,6 +87,7 @@ public class UIManager : MonoBehaviour
         _myControls.enabled = false;
         _myPanel.SetActive(false);
         _levelText = _levelObject.GetComponent<Text>();
+        _progressBar = Progress.GetComponent<Slider>();
     }
 
     // Update is called once per frame

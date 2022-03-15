@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyGrounded.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBoxDetector.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\TutorialText.cs" />
     <Compile Include="Assets\Scripts\Characters\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Player\Hook.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLifeComponent.cs" />
@@ -86,7 +87,6 @@
     <Compile Include="Assets\Scripts\Player\InputManager.cs" />
     <Compile Include="Assets\Scripts\EndLevelArea.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\TutorialText.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
