@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour
     public int m_currentLevel = 1;
     [HideInInspector]
     public bool m_level;
+    [HideInInspector]
+    public int m_world = 1;
     #endregion
 
     #region methods
@@ -56,19 +58,21 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerDies()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(m_world);
     }
 
     public void Save()
     {
         PlayerPrefs.SetInt("level", m_currentLevel);
         PlayerPrefs.SetInt("tornillos", m_tornilloCount);
+        PlayerPrefs.SetInt("world", m_world);
     }
 
     public void Load()
     {
         m_currentLevel = PlayerPrefs.GetInt("level", m_currentLevel);
         m_tornilloCount = PlayerPrefs.GetInt("tornillos", m_tornilloCount);
+        m_world = PlayerPrefs.GetInt("world", m_world);
     }
 
     public void Pause()
@@ -92,6 +96,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("level", 1);
         PlayerPrefs.SetInt("tornillos", 0);
+        PlayerPrefs.SetInt("world", 1);
         SceneManager.LoadScene(1);
     }
 
@@ -106,6 +111,10 @@ public class GameManager : MonoBehaviour
         Timeleft = InitialTime;
     }
 
+    private void NextWorld()
+    {
+        SceneManager.LoadScene(m_world);
+    }
     #endregion
 
     #region parameters
@@ -126,13 +135,13 @@ public class GameManager : MonoBehaviour
         _playerInput = _player.GetComponent<InputManager>();
         _myScenesManager = _scenesManager.GetComponent<ScenesManager>();
 
+        Debug.Log(m_world);
         _player.transform.position = _beginLevelArea[m_currentLevel - 1].position;
         _camera.transform.position = _posCamera[m_currentLevel - 1].position;
 
         //tornillos y tiempo
         Timeleft = InitialTime;
         _myUIManager = _canvas.GetComponent<UIManager>();
-        
     }
 
     private void Awake()
@@ -153,6 +162,11 @@ public class GameManager : MonoBehaviour
             }
             _myUIManager.showTornillos(m_tornilloCount);
             _myUIManager.showProgress(m_tornilloCount);
+        }
+        if(m_currentLevel == 6)
+        {
+            m_world++;
+            NextWorld();
         }
     }
 }

@@ -17,7 +17,7 @@ public class UIManager2 : MonoBehaviour
     #region methods
     public void LoadGame()
     {
-        if (GameManager.Instance.m_currentLevel <= 5) SceneManager.LoadScene(1);
+        SceneManager.LoadScene(GameManager.Instance.m_world);
     }
     public void Quit()
     {

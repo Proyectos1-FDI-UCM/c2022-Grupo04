@@ -9328,7 +9328,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -9364,7 +9364,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!212 &318222407
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9424,8 +9424,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318222403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -24.6, z: 0}
-  m_LocalScale: {x: 132.33554, y: 0.28791, z: 1}
+  m_LocalPosition: {x: -4.6561, y: -24.6, z: 0}
+  m_LocalScale: {x: 141.65196, y: 0.28791, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 751
@@ -15597,6 +15597,7 @@ MonoBehaviour:
   - {fileID: 1806909321}
   m_currentLevel: 1
   m_level: 0
+  m_world: 0
   InitialTime: 120
   m_tornilloCount: 0
 --- !u!4 &511514567
@@ -25300,6 +25301,10 @@ PrefabInstance:
       propertyPath: _jumpForce
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 674856279849470164, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
+      propertyPath: _movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 674856279849470165, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: UIManager
       value: 
@@ -29446,7 +29451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 19.6206, y: 18.1}
+  m_AnchoredPosition: {x: 19.620605, y: 18.099976}
   m_SizeDelta: {x: 39.2412, y: 40.2334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946063796
