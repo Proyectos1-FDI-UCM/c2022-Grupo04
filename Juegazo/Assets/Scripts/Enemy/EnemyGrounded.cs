@@ -10,6 +10,7 @@ public class EnemyGrounded : MonoBehaviour
     private GroundCheck _myGroundCheck;
     private Transform _myTransform;
     private Transform _groundTransform;
+    private CharacterMovement _myCharacterMovement;
     #endregion
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class EnemyGrounded : MonoBehaviour
         _myTransform = transform;
         _myGroundCheck = GetComponentInChildren<GroundCheck>();
         _groundTransform = _grounded.transform;
+        _myCharacterMovement = GetComponent<CharacterMovement>();
     }
 
     // Update is called once per frame
@@ -30,6 +32,9 @@ public class EnemyGrounded : MonoBehaviour
         }*/
 
         if (!Physics2D.Raycast(_groundTransform.position, Vector2.down, 0.1f))
+        {
             _myTransform.Rotate(0, 180, 0);
+            _myCharacterMovement.SetDirection(_myTransform.forward);
+        }
     }
 }
