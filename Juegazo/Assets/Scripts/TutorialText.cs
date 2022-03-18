@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class TutorialText : MonoBehaviour
 {
+    #region references
+    SpriteRenderer _mySpriteRenderer;
+    #endregion
+
     #region methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        InputManager _inputManager;
-        _inputManager = collision.GetComponent<InputManager>();
-        if (_inputManager != null)
+        if (collision.GetComponent<InputManager>() != null)
         {
             Debug.Log("choquesito");
-            gameObject.SetActive(true);
-        }
-        else
-        {
-            gameObject.SetActive(false);
+            _mySpriteRenderer.enabled = true;
         }
     }
     #endregion
@@ -24,7 +22,8 @@ public class TutorialText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        _mySpriteRenderer.enabled = false;
     }
 
     // Update is called once per frame
