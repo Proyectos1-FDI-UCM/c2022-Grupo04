@@ -25299,11 +25299,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470164, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: _jumpForce
-      value: 7
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470164, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: _movementSpeed
-      value: 5
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470165, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: UIManager
