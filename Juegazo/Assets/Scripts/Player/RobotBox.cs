@@ -31,14 +31,19 @@ public class RobotBox : MonoBehaviour
             GameObject newObject = Instantiate(myBox, _boxSpawnPos.position, _myTransfrom.rotation) as GameObject; //mejor con array activando y desactivando para no perder memoria
             _listOfBoxes.Add(newObject);
             boxNum++;
-            if(boxNum == boxMax)
-            {
-                GameObject gameObjectToRemove = _listOfBoxes[0];
-                _listOfBoxes.Remove(gameObjectToRemove);
-                Destroy(gameObjectToRemove);
-                boxNum--;
-            }
+            if (boxNum == boxMax) RemoveBox();
+            
         } 
+    }   
+    public void RemoveBox()
+    {
+        if(boxNum >= 1)
+        {
+            GameObject gameObjectToRemove = _listOfBoxes[0];
+            _listOfBoxes.Remove(gameObjectToRemove);
+            Destroy(gameObjectToRemove);
+            boxNum--;
+        }
     }
    
 
