@@ -57,23 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\EnemyLifeComponent.cs" />
-    <Compile Include="Assets\Scripts\enemy2\EnemyThere.cs" />
+    <Compile Include="Assets\Scripts\Enemy2\EnemyThere.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGrounded.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBoxDetector.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\TutorialText.cs" />
+    <Compile Include="Assets\Scripts\Level Objects\TutorialText.cs" />
     <Compile Include="Assets\Scripts\Characters\GroundCheck.cs" />
     <Compile Include="Assets\Scripts\Player\Hook.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerLifeComponent.cs" />
     <Compile Include="Assets\Scripts\Camera\StopCamera.cs" />
-    <Compile Include="Assets\Scripts\Tornillos.cs" />
-    <Compile Include="Assets\Scripts\BeginLevelArea.cs" />
+    <Compile Include="Assets\Scripts\Objects\Tornillos.cs" />
+    <Compile Include="Assets\Scripts\Level Objects\BeginLevelArea.cs" />
     <Compile Include="Assets\Scripts\Objects\Trap.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Damage.cs" />
-    <Compile Include="Assets\Scripts\enemy2\EnemyFollow.cs" />
+    <Compile Include="Assets\Scripts\Enemy2\EnemyFollow.cs" />
     <Compile Include="Assets\Scripts\Objects\ContinuousButton.cs" />
-    <Compile Include="Assets\Scripts\ScenesManager.cs" />
+    <Compile Include="Assets\Scripts\Scene Manager\ScenesManager.cs" />
     <Compile Include="Assets\Scripts\Objects\BeltMovement.cs" />
     <Compile Include="Assets\Scripts\Objects\PlataformStateManager.cs" />
     <Compile Include="Assets\Scripts\Objects\BeltStateManager.cs" />
@@ -82,10 +82,10 @@
     <Compile Include="Assets\Scripts\Player\Raycast.cs" />
     <Compile Include="Assets\Scripts\Characters\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Objects\DiscreteButton.cs" />
-    <Compile Include="Assets\Scripts\UIManager2.cs" />
-    <Compile Include="Assets\Scripts\enemy2\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\UI Managers\UIManager2.cs" />
+    <Compile Include="Assets\Scripts\Enemy2\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Player\InputManager.cs" />
-    <Compile Include="Assets\Scripts\EndLevelArea.cs" />
+    <Compile Include="Assets\Scripts\Level Objects\EndLevelArea.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
