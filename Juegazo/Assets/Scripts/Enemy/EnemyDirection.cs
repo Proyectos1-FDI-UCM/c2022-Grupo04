@@ -71,6 +71,8 @@ public class EnemyDirection : MonoBehaviour
         {
             _direction = SetRandomMovement();
             _myCharacterMovement.SetDirection(_direction);
+            if (_myCharacterMovement.m_movementDirection.x > 0) _myTransform.localScale = new Vector2(1f, 1f);
+            else if (_myCharacterMovement.m_movementDirection.x < 0f) _myTransform.localScale = new Vector2(-1f, 1f);
             _elapsedTime = 0f;
         }
     }
