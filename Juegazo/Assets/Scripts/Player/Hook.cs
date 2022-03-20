@@ -10,6 +10,7 @@ public class Hook : MonoBehaviour
     private LayerMask _myLayer;
     private InputManager _myInput;
     private GroundCheck _myGroundCheck;
+    private LayerMask _plataform;
     #endregion
 
     #region properties
@@ -20,6 +21,20 @@ public class Hook : MonoBehaviour
     private Vector2 target;
     [HideInInspector] public bool moving = false;
     #endregion
+    #region methods
+    public bool Obstaculos(Vector2 _hookdirection)
+    {
+        Debug.DrawRay(_myTransform.position, _hookdirection);
+        if (Physics2D.Raycast(_myTransform.position, _hookdirection , 100f, _plataform))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +43,8 @@ public class Hook : MonoBehaviour
         _myRigidBody = GetComponent<Rigidbody2D>();
         _myInput = GetComponent<InputManager>();
         _myGroundCheck = GetComponentInChildren<GroundCheck>();
+        _plataform = LayerMask.GetMask("Plataform");
+       
     }
 
     // Update is called once per frame
@@ -42,12 +59,16 @@ public class Hook : MonoBehaviour
             Vector2 direction = new Vector2(target.x - transform.position.x, target.y - transform.position.y);
             direction.Normalize();
             transform.Translate(direction * step);
+            
             if (Vector2.Distance(transform.position, target) < 1.5f)
             {
                 _myRigidBody.gravityScale = 1;
                 moving = false;
                 _myInput.enabled = true;
             }
+            
+            
+            
         }
     }
 
@@ -62,12 +83,16 @@ public class Hook : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(_myTransform.position, direction, maxDistance, _myLayer);
             Debug.DrawRay(_myTransform.position, direction, Color.gray, 5f);
             Debug.Log("RayCast lanzado");
-            if (hit.collider != null)
+            if (!Obstaculos(direction))
             {
-                Debug.Log("Tocado");
-                target = hit.transform.position;
-                moving = true;
+                if (hit.collider != null)
+                {
+                    Debug.Log("Tocado");
+                    target = hit.transform.position;
+                    moving = true;
+                }
             }
+                
         }
     }
 }
