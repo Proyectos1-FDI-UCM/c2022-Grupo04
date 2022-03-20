@@ -24,31 +24,45 @@ public class EnemyDirection : MonoBehaviour
     private Vector2 SetRandomMovement()
     {
         Vector2 newDirection = new Vector2(0,0);
+        int prb = 0;
 
         if (_myCharacterMovement.m_movementDirection.x != 0)
-            newDirection.x = Random.Range(0, 2);
+            prb = Random.Range(0, 2);
         else
-            newDirection.x = 1;
+        {
+            newDirection = new Vector2(1, 0);
+            newDirection = SetRandomRotation(newDirection);
+            prb = 2;
+        }
 
-        if (newDirection.x == 1)
-            SetRandomRotation();
+        if (prb == 1)
+            newDirection = SetRandomRotation(newDirection);
+        else if(prb == 0)
+            newDirection = new Vector2(0, 0);
+
         return newDirection;
     }
 
-    private void SetRandomRotation()
+    private Vector2 SetRandomRotation(Vector2 dir)
     {
-        if(Random.Range(0,2) == 1)
-            _myTransform.Rotate(0, 180, 0);
+        Vector2 aux;
+
+        if (Random.Range(0, 2) == 1)
+            aux = dir * -1;
+        else
+            aux = dir;
+
+        return aux;
     }
 
     private void WallDetection()
     {
-        if (Physics2D.Raycast(_myTransform.position, _myTransform.right, 1, _myLayerMask))
+        if (Physics2D.Raycast(_myTransform.position,new Vector2(_myTransform.localScale.x, 0), 1, _myLayerMask))
         {
             Debug.Log("Sí");
-            _myTransform.Rotate(0, 180, 0); 
+            _myCharacterMovement.SetDirection(_myCharacterMovement.m_movementDirection * -1);
         }
-        Debug.DrawRay(_myTransform.position, _myTransform.right);
+        Debug.DrawRay(_myTransform.position, new Vector2(_myTransform.localScale.x, 0));
     }
     #endregion
 
@@ -71,8 +85,6 @@ public class EnemyDirection : MonoBehaviour
         {
             _direction = SetRandomMovement();
             _myCharacterMovement.SetDirection(_direction);
-            if (_myCharacterMovement.m_movementDirection.x > 0) _myTransform.localScale = new Vector2(1f, 1f);
-            else if (_myCharacterMovement.m_movementDirection.x < 0f) _myTransform.localScale = new Vector2(-1f, 1f);
             _elapsedTime = 0f;
         }
     }

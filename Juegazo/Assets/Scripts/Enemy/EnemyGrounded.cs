@@ -31,10 +31,11 @@ public class EnemyGrounded : MonoBehaviour
             _myTransform.Rotate(0, 180, 0);
         }*/
 
+        Debug.DrawRay(_groundTransform.position, Vector2.down);
         if (!Physics2D.Raycast(_groundTransform.position, Vector2.down, 0.1f))
         {
-            _myTransform.Rotate(0, 180, 0);
-            _myCharacterMovement.SetDirection(_myTransform.forward);
+            //_myTransform.Rotate(0, 180, 0);
+            _myCharacterMovement.SetDirection(_myCharacterMovement.m_movementDirection * -1);
         }
     }
 }

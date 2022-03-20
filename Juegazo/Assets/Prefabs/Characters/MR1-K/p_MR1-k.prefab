@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementSpeed: 5
   _jumpForce: 5
+  m_JumpVector: {x: 0, y: 0}
   m_movementDirection: {x: 0, y: 0}
 --- !u!114 &3060542066308617901
 MonoBehaviour:

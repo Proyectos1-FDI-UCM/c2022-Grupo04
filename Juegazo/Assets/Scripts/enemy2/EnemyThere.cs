@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class EnemyThere : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    Rigidbody2D _myRigidBody;
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        
+        if(collision.collider.GetComponent<Rigidbody2D>() != null)
+        {
+            _myRigidBody.velocity = _myRigidBody.velocity.normalized;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _myRigidBody = GetComponent<Rigidbody2D>();
     }
 }

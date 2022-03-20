@@ -34,7 +34,7 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _myTransform2.position = Vector2.Lerp(_myTransform2.position, _playerposition.position, _enemySpeed * Time.deltaTime);
+        _myTransform2.position = Vector2.MoveTowards(_myTransform2.position, _playerposition.position, _enemySpeed * Time.deltaTime);
     }
     private void Awake()
     {
