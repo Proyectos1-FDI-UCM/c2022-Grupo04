@@ -14,8 +14,7 @@ public class Tornillos : MonoBehaviour
             GameManager.Instance.m_tornilloCount++;
             Debug.Log(GameManager.Instance.m_tornilloCount);
             Destroy(gameObject); //asi?
-            if (GameManager.Instance.m_tornilloCount == numTornillos)
-                _pared.SetActive(false);
+            _pared.SetActive(false);
            
             //esta activacion en verdad se hace con el trigger de inicia nive
 
