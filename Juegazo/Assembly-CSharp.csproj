@@ -79,7 +79,6 @@
     <Compile Include="Assets\Scripts\Objects\PlataformStateManager.cs" />
     <Compile Include="Assets\Scripts\Objects\BeltStateManager.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyDirection.cs" />
-    <Compile Include="Assets\Scripts\Objects\Elevator.cs" />
     <Compile Include="Assets\Scripts\Player\RobotBox.cs" />
     <Compile Include="Assets\Scripts\Player\Raycast.cs" />
     <Compile Include="Assets\Scripts\Characters\CharacterMovement.cs" />
