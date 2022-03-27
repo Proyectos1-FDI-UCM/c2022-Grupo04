@@ -5,7 +5,7 @@ using UnityEngine;
 public class DiscreteButton : MonoBehaviour
 {
     #region properties
-    private enum ButtonType { Belt, Plataform }
+    private enum ButtonType { Belt, Plataform, Lift }
     [SerializeField]
     private ButtonType _type;
     #endregion
@@ -25,11 +25,17 @@ public class DiscreteButton : MonoBehaviour
                 for (int i = 0; i < _attachedObject.Length; i++)
                     _attachedObject[i].GetComponent<BeltStateManager>().Active();
             }
-            else
+            else if (_type==ButtonType.Plataform)
             {
                 for (int i = 0; i < _attachedObject.Length; i++)
-                    _attachedObject[i].GetComponent<PlataformStateManager>().FinalState();
+                    _attachedObject[i].GetComponent<PlataformStateManager>().Move();
             }
+            else if (_type==ButtonType.Lift)
+            {
+                for (int i = 0; i < _attachedObject.Length; i++)
+                    _attachedObject[i].GetComponent<Lift>().Move();
+            }
+
         }
     }
     #endregion

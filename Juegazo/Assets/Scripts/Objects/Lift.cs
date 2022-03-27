@@ -16,23 +16,12 @@ public class Lift : MonoBehaviour
     private Vector2 _initialdirection;
     private Vector2 _direction;
     private bool _isrunning;
+    private bool _isreturning;
 
     #endregion
 
     #region methods
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        PlayerLifeComponent  _playerlifecomponent;
-        _playerlifecomponent = collision.collider.GetComponentInParent<PlayerLifeComponent>();
-        Debug.Log(_playerlifecomponent);
-        if (_playerlifecomponent != null)
-        {
-            _isrunning = true;
-            
-        }
-            
 
-    }
 
     #endregion
     // Start is called before the first frame update
@@ -40,9 +29,9 @@ public class Lift : MonoBehaviour
     {
         _myTransform = transform;
         _direction = _initialdirection;
-        _startposition = _myTransform.position;
         _isrunning = false;
-        _finalposition = _startposition + (_distance * _direction); //se calcula la posicion final segun el rango que queramos y direccion (queremos que sea un extremo o centro?)
+        _startposition = _myTransform.position;
+        _finalposition = _startposition + (_distance * _direction); //se calcula la posicion final segun el rango que queramos y direccion
     }
 
     // Update is called once per frame
@@ -50,7 +39,6 @@ public class Lift : MonoBehaviour
     {
         if (_isrunning)
         {
-            //_myTransform2.position = Vector2.MoveTowards(_myTransform2.position, _playerposition.position, _enemySpeed * Time.deltaTime); como usar el move towards
             _myTransform.position = Vector2.MoveTowards(_myTransform.position, ((Vector2)_myTransform.position+_direction), _speed * Time.deltaTime);
             if (_initialdirection.y==1)
             {
@@ -79,8 +67,39 @@ public class Lift : MonoBehaviour
                 }
             }
             
-
         }
+        if (_isreturning)
+        {
+            if (_initialdirection.y == 1)
+            {
+            _myTransform.position = Vector2.MoveTowards(_myTransform.position, _startposition, _speed * Time.deltaTime);
+                if (_myTransform.position.y <= _startposition.y)
+                    _isreturning = false;
+            }
+            else
+            {
+            _myTransform.position = Vector2.MoveTowards(_myTransform.position, _startposition, _speed * Time.deltaTime);
+                if (_myTransform.position.y >= _startposition.y)
+                    _isreturning = false;
+            }
+        }
+        
+       
+        
+
+
+
+
     }
+    public void Move()
+    {
+        _isrunning = true;
+    }
+    public void Stop()
+    {
+        _isrunning = false;
+        _isreturning = true;
+    }
+
 }
 
