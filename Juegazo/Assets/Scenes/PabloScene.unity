@@ -334,5 +334,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Pablo 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4273504340163477818, guid: 9516638e6566d3c489c7a25b3cedc0ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.3264124
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273504340163477818, guid: 9516638e6566d3c489c7a25b3cedc0ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9466
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9516638e6566d3c489c7a25b3cedc0ad, type: 3}
