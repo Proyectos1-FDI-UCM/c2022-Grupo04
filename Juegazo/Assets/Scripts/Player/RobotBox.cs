@@ -15,12 +15,9 @@ public class RobotBox : MonoBehaviour
     #region reference
     private Transform _myTransfrom;
     private GroundCheck _myGroundCheck;
-    private UIManager _UIManager;
-    private GameManager _gameManager;
     #endregion
 
     #region parameters
-    //private int boxNum = 0;
     private int boxMax = 4;
     #endregion
 
@@ -32,21 +29,19 @@ public class RobotBox : MonoBehaviour
         {
             GameObject newObject = Instantiate(myBox, _boxSpawnPos.position, _myTransfrom.rotation) as GameObject; //mejor con array activando y desactivando para no perder memoria
             _listOfBoxes.Add(newObject);
-            //boxNum++;
-            _gameManager.m_boxesCount++;
-           // _UIManager.showBoxes(_gameManager.m_boxesCount);
-            if (_gameManager.m_boxesCount == boxMax) RemoveBox();
+            GameManager.Instance.m_boxesCount++;
+            if (GameManager.Instance.m_boxesCount == boxMax) RemoveBox();
             
         } 
     }   
     public void RemoveBox()
     {
-        if(_gameManager.m_boxesCount >= 1)
+        if(GameManager.Instance.m_boxesCount >= 1)
         {
             GameObject gameObjectToRemove = _listOfBoxes[0];
             _listOfBoxes.Remove(gameObjectToRemove);
             Destroy(gameObjectToRemove);
-            _gameManager.m_boxesCount--;
+            GameManager.Instance.m_boxesCount--;
         }
     }
    
