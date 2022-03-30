@@ -65,7 +65,6 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("level", m_currentLevel);
         PlayerPrefs.SetInt("tornillos", m_tornilloCount);
-        PlayerPrefs.SetInt("boxes", m_boxesCount);
         PlayerPrefs.SetInt("world", m_world);
     }
 
@@ -73,7 +72,6 @@ public class GameManager : MonoBehaviour
     {
         m_currentLevel = PlayerPrefs.GetInt("level", m_currentLevel);
         m_tornilloCount = PlayerPrefs.GetInt("tornillos", m_tornilloCount);
-        m_boxesCount = PlayerPrefs.GetInt("boxes", m_boxesCount);
         m_world = PlayerPrefs.GetInt("world", m_world);
     }
 

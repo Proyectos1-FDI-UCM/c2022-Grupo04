@@ -18,7 +18,7 @@ public class BeltMovement : MonoBehaviour
             collision.collider.transform.parent.Translate(m_direction * Vector2.right * m_speed * Time.deltaTime);
         }
         else if (collision.collider.GetComponent<EnemyThere>() != null)
-            collision.rigidbody.velocity = m_direction * Vector2.right * m_speed;
+            collision.rigidbody.velocity += m_direction * Vector2.right * m_speed;
     }
     #endregion
 }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Objects\Tornillos.cs" />
     <Compile Include="Assets\Scripts\Level Objects\BeginLevelArea.cs" />
     <Compile Include="Assets\Scripts\Objects\Lift.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSlopeRotation.cs" />
     <Compile Include="Assets\Scripts\Objects\Trap.cs" />
     <Compile Include="Assets\Scripts\UI Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Damage.cs" />
