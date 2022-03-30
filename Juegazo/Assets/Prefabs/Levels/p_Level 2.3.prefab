@@ -201,7 +201,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 527819934112209775}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -346,7 +346,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 717840382820710390}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -564,7 +564,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1418125375252815832}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -782,7 +782,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1832487965207115356}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -891,7 +891,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2413862485891873391}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1000,7 +1000,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2536353178847910265}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1237,7 +1237,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 4338349635895834986}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1381,7 +1381,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5736137283300023074}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1490,7 +1490,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 5891686975158787027}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1631,7 +1631,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6095391140264913894}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1931,7 +1931,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7845688941199250239}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2040,7 +2040,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7963431366808677852}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2186,7 +2186,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8448208047015431006}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2295,7 +2295,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8695651636029398500}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2404,7 +2404,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 8748249288407488905}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2440,6 +2440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: p_ConveyerBelt (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2066746387814991055, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
     - target: {fileID: 2066746387814991057, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2526,6 +2530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: p_ConveyerBelt (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2066746387814991055, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
     - target: {fileID: 2066746387814991057, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2825,6 +2833,10 @@ PrefabInstance:
       value: 1.0000002
       objectReference: {fileID: 0}
     - target: {fileID: 5809532741105271016, guid: 2b249a7c05fb4e547b42d147056ef9dd, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
+    - target: {fileID: 5809532741105271016, guid: 2b249a7c05fb4e547b42d147056ef9dd, type: 3}
       propertyPath: m_Offset.y
       value: -0.00000020861626
       objectReference: {fileID: 0}
@@ -2998,6 +3010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: p_ConveyerBelt (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2066746387814991055, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
     - target: {fileID: 2066746387814991057, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3228,6 +3244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: p_ConveyerBelt (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2066746387814991055, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 56f7a6d972564304d9a905ec6615c343, type: 2}
     - target: {fileID: 2066746387814991057, guid: dc0abdf9867f2e04ab584f3a835b8abe, type: 3}
       propertyPath: m_RootOrder
       value: 1

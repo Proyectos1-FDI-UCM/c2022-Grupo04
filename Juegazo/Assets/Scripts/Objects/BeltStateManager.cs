@@ -14,6 +14,7 @@ public class BeltStateManager : MonoBehaviour
 
     #region references
     private BeltMovement _myMovement;
+    private Transform _myTransform;
     #endregion
 
     #region parameters
@@ -31,11 +32,12 @@ public class BeltStateManager : MonoBehaviour
         else if(_parameter == BeltParameters.Direction)
         {
             _myMovement.m_direction *= -1;
+            _myTransform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
         else
         {
             _myMovement.m_speed *= _multiple;
-            _myMovement.m_direction *= -1;
+            _myTransform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
         }
     }
 
@@ -53,6 +55,7 @@ public class BeltStateManager : MonoBehaviour
         {
             _myMovement.m_speed = _initialSpeed;
             _myMovement.m_direction = _initialDirection;
+            
         }
     }
     #endregion
@@ -62,5 +65,6 @@ public class BeltStateManager : MonoBehaviour
         _myMovement = GetComponent<BeltMovement>();
         _initialSpeed = _myMovement.m_speed;
         _initialDirection = _myMovement.m_direction;
+        _myTransform = transform;
     }
 }
