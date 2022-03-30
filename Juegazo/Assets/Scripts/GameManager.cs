@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("level", m_currentLevel);
         PlayerPrefs.SetInt("tornillos", m_tornilloCount);
+        PlayerPrefs.SetInt("boxes", m_boxesCount);
         PlayerPrefs.SetInt("world", m_world);
     }
 
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
     {
         m_currentLevel = PlayerPrefs.GetInt("level", m_currentLevel);
         m_tornilloCount = PlayerPrefs.GetInt("tornillos", m_tornilloCount);
+        m_boxesCount = PlayerPrefs.GetInt("boxes", m_boxesCount);
         m_world = PlayerPrefs.GetInt("world", m_world);
     }
 
@@ -96,6 +98,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("level", 1);
         PlayerPrefs.SetInt("tornillos", 0);
+        PlayerPrefs.SetInt("boxes", 0);
         PlayerPrefs.SetInt("world", 1);
         SceneManager.LoadScene(1);
     }
@@ -123,6 +126,8 @@ public class GameManager : MonoBehaviour
     private float Timeleft;
     [HideInInspector]
     public int m_tornilloCount = 0;
+    [HideInInspector]
+    public int m_boxesCount = 0;
     #endregion
 
     // Start is called before the first frame update
@@ -161,6 +166,7 @@ public class GameManager : MonoBehaviour
                 Timeleft = InitialTime;
             }
             _myUIManager.showTornillos(m_tornilloCount);
+            _myUIManager.showBoxes(m_boxesCount);
             _myUIManager.showProgress(m_tornilloCount);
         }
         if(m_currentLevel == 6)
