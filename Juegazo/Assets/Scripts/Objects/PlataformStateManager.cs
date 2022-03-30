@@ -38,6 +38,7 @@ public class PlataformStateManager : MonoBehaviour
     public void Move() // pensado para mover en un eje a la vez 
     {
         _isrunning = true;
+        _isreturning = false;
     }
     public void Return()
     {
