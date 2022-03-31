@@ -13,8 +13,6 @@ public class UIManager : MonoBehaviour
     private GameObject ShowTornillos;
     private Text _tornillosText;
     [SerializeField]
-    private GameObject ShowBoxes;
-    [SerializeField]
     private Image _imagentornillo;
     [SerializeField]
     private GameObject _levelObject;

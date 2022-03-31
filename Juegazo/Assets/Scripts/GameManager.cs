@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
                 Timeleft = InitialTime;
             }
             _myUIManager.showTornillos(m_tornilloCount);
-            _myUIManager.showBoxes(GameManager.Instance.m_boxesCount);
+            _myUIManager.showBoxes(m_boxesCount);
             _myUIManager.showProgress(m_tornilloCount);
         }
         if(m_currentLevel == 6)

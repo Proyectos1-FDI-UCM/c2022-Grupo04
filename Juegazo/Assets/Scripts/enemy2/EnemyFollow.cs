@@ -20,7 +20,7 @@ public class EnemyFollow : MonoBehaviour
     {
         EnemyThere _enemyThere;
         _enemyThere = collision.collider.GetComponent<EnemyThere>();
-        if (_enemyThere != null)
+        if (enabled && _enemyThere != null)
             _myCharacterMovement.JumpRequest();
     }
     // Start is called before the first frame update
