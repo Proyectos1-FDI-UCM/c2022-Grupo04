@@ -19,6 +19,7 @@ public class RobotBox : MonoBehaviour
 
     #region parameters
     private int boxMax = 4;
+    //public int boxesCount = 0;
     #endregion
 
 

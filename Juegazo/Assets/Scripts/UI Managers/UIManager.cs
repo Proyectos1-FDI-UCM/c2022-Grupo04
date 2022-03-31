@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     private Text _tornillosText;
     [SerializeField]
     private GameObject ShowBoxes;
-    private Text _boxesText;
+    //private Text _boxesText;
     [SerializeField]
     private Image _imagentornillo;
     [SerializeField]
@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject Progress;
     private Slider _progressBar;
+    [SerializeField]
+    private GameObject[] _boxes;
     #endregion
 
     #region references
@@ -74,7 +76,36 @@ public class UIManager : MonoBehaviour
     }
     public void showBoxes(int boxesCount)
     {
-        _boxesText.text = "Boxes: " + boxesCount;
+        switch(boxesCount)
+        {
+            case 0:
+                {
+                    foreach (GameObject boxes in _boxes)
+                    {
+                        boxes.SetActive(true);
+                    }
+                    break;
+                }
+            case 1:
+                {
+                    _boxes[0].SetActive(false);
+                    _boxes[1].SetActive(true);
+                    _boxes[2].SetActive(true);
+                    break;
+                }
+            case 2:
+                {
+                    _boxes[1].SetActive(false);
+                    _boxes[2].SetActive(true);
+                    break;
+                }
+            case 3:
+                {
+                    _boxes[2].SetActive(false);
+                    break;
+                }
+        }
+        //_boxesText.text = "Boxes: " + boxesCount;
     }
     public void showProgress(int tornillocount)
     {
@@ -91,7 +122,7 @@ public class UIManager : MonoBehaviour
     {
         _timeText = ShowTime.GetComponent<Text>();
         _tornillosText = ShowTornillos.GetComponent<Text>();
-        _boxesText = ShowBoxes.GetComponent<Text>();
+        //_boxesText = ShowBoxes.GetComponent<Text>();
         _myControls.enabled = false;
         _myPanel.SetActive(false);
         _levelText = _levelObject.GetComponent<Text>();

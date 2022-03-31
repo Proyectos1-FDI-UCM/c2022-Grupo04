@@ -6,7 +6,18 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    #region parameters
+    [SerializeField]
+    private float InitialTime;
+    private float Timeleft;
+    [HideInInspector]
+    public int m_tornilloCount = 0;
+    [HideInInspector]
+    public int m_boxesCount = 0;
+    #endregion
+
     #region references
+    //private RobotBox _robotBox;
     private GameObject _camera;
     private CameraMovement _cameraMovement;
     [SerializeField]
@@ -96,7 +107,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("level", 1);
         PlayerPrefs.SetInt("tornillos", 0);
-        PlayerPrefs.SetInt("boxes", 0);
+        //PlayerPrefs.SetInt("boxes", 0);
         PlayerPrefs.SetInt("world", 1);
         SceneManager.LoadScene(1);
     }
@@ -118,15 +129,6 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    #region parameters
-    [SerializeField]
-    private float InitialTime;
-    private float Timeleft;
-    [HideInInspector]
-    public int m_tornilloCount = 0;
-    [HideInInspector]
-    public int m_boxesCount = 0;
-    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -164,7 +166,7 @@ public class GameManager : MonoBehaviour
                 Timeleft = InitialTime;
             }
             _myUIManager.showTornillos(m_tornilloCount);
-            _myUIManager.showBoxes(m_boxesCount);
+            _myUIManager.showBoxes(GameManager.Instance.m_boxesCount);
             _myUIManager.showProgress(m_tornilloCount);
         }
         if(m_currentLevel == 6)
