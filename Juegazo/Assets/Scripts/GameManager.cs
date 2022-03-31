@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region references
-    //private RobotBox _robotBox;
     private GameObject _camera;
     private CameraMovement _cameraMovement;
     [SerializeField]
@@ -66,6 +65,8 @@ public class GameManager : MonoBehaviour
 
         _playerInput.enabled = false;
         _player.GetComponent<CharacterMovement>().SetDirection(new Vector2(1, 0));
+
+        _myUIManager.showLevels(m_currentLevel);
     }
 
     public void OnPlayerDies()
@@ -148,6 +149,8 @@ public class GameManager : MonoBehaviour
         //tornillos y tiempo
         Timeleft = InitialTime;
         _myUIManager = _canvas.GetComponent<UIManager>();
+
+        _myUIManager.showLevels(m_currentLevel);
     }
 
     private void Awake()

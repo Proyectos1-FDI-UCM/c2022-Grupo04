@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     private Slider _progressBar;
     [SerializeField]
     private GameObject[] _boxes;
+    [SerializeField]
+    private GameObject[] _levels;
     #endregion
 
     #region references
@@ -104,6 +106,15 @@ public class UIManager : MonoBehaviour
         }
         
     }
+    public void showLevels(int levelCount)
+    {
+        foreach (GameObject levels in _levels)
+        {
+            levels.SetActive(false);
+        }
+        _levels[levelCount - 1].SetActive(true);
+
+    }
     public void showProgress(int tornillocount)
     {
         _progressBar.value = tornillocount;
@@ -118,7 +129,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _timeText = ShowTime.GetComponent<Text>();
-        _tornillosText = ShowTornillos.GetComponent<Text>();
+        _tornillosText = ShowTornillos.GetComponent<Text>();    //mirar si sigue siendo necesario
         _myControls.enabled = false;
         _myPanel.SetActive(false);
         _levelText = _levelObject.GetComponent<Text>();
