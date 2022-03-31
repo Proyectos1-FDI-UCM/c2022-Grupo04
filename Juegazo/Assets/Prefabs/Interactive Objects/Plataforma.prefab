@@ -122,5 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948e1a5763ff35f4e9c9c55b6ed6b097, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialPos: {x: -0.1, y: -13.3}
-  _finalPos: {x: 0, y: 0}
+  _initialdirection: {x: 0, y: 0}
+  _distance: {x: 0, y: 0}
+  _speed: 0
