@@ -14,7 +14,6 @@ public class UIManager : MonoBehaviour
     private Text _tornillosText;
     [SerializeField]
     private GameObject ShowBoxes;
-    //private Text _boxesText;
     [SerializeField]
     private Image _imagentornillo;
     [SerializeField]
@@ -105,7 +104,7 @@ public class UIManager : MonoBehaviour
                     break;
                 }
         }
-        //_boxesText.text = "Boxes: " + boxesCount;
+        
     }
     public void showProgress(int tornillocount)
     {
@@ -122,7 +121,6 @@ public class UIManager : MonoBehaviour
     {
         _timeText = ShowTime.GetComponent<Text>();
         _tornillosText = ShowTornillos.GetComponent<Text>();
-        //_boxesText = ShowBoxes.GetComponent<Text>();
         _myControls.enabled = false;
         _myPanel.SetActive(false);
         _levelText = _levelObject.GetComponent<Text>();

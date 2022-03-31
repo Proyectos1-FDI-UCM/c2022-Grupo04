@@ -16,6 +16,19 @@ public class GameManager : MonoBehaviour
     public int m_boxesCount = 0;
     #endregion
 
+    #region properties
+    [SerializeField]
+    private Transform[] _posCamera = new Transform[10];
+    [SerializeField]
+    private Transform[] _beginLevelArea = new Transform[10];
+    [HideInInspector]
+    public int m_currentLevel = 1;
+    [HideInInspector]
+    public bool m_level;
+    [HideInInspector]
+    public int m_world = 1;
+    #endregion
+
     #region references
     //private RobotBox _robotBox;
     private GameObject _camera;
@@ -40,18 +53,6 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    #region properties
-    [SerializeField]
-    private Transform[] _posCamera = new Transform[10];
-    [SerializeField]
-    private Transform[] _beginLevelArea = new Transform[10];
-    [HideInInspector]
-    public int m_currentLevel = 1;
-    [HideInInspector]
-    public bool m_level;
-    [HideInInspector]
-    public int m_world = 1;
-    #endregion
 
     #region methods
     public void ChangeLevel()
