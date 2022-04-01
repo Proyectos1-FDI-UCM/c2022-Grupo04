@@ -46,7 +46,7 @@ public class InputManager : MonoBehaviour
         {
             _robotBox.RemoveBox();
         }
-        if (Input.GetMouseButtonDown(0))
+        if (!_myUIManager._myPanel.activeSelf && Input.GetMouseButtonDown(0))
         {            
             _myHook.StartGrapple();
         }

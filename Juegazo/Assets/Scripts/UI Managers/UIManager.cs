@@ -27,7 +27,6 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region references
-    [SerializeField]
     public GameObject _myPanel;
     [SerializeField]
     private Canvas _myCanvas;
@@ -43,8 +42,8 @@ public class UIManager : MonoBehaviour
     }
     public void Continue()
     {
-        _myPanel.SetActive(false);
         GameManager.Instance.Continue();
+        _myPanel.SetActive(false);
     }
     public void MainMenu()
     {
