@@ -25,14 +25,9 @@ public class Hook : MonoBehaviour
     public bool Obstaculos(Vector2 _hookdirection)
     {
         Debug.DrawRay(_myTransform.position, _hookdirection);
-        if (Physics2D.Raycast(_myTransform.position, _hookdirection , 100f, _plataform))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        RaycastHit2D hit = Physics2D.Raycast(_myTransform.position, _hookdirection.normalized, _hookdirection.magnitude, _plataform);
+        Debug.Log(hit.collider);
+        return hit.collider != null;
     }
     #endregion
     // Start is called before the first frame update
@@ -77,14 +72,14 @@ public class Hook : MonoBehaviour
         if (_myGroundCheck.IsGrounded())
         {
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-            direction.Normalize();
+            float distance = direction.magnitude;
 
             //Raycast (origin, direction, maxDistance, LayerMask, queryTriggerInteraction); devuelve un booleano
-            RaycastHit2D hit = Physics2D.Raycast(_myTransform.position, direction, maxDistance, _myLayer);
-            Debug.DrawRay(_myTransform.position, direction, Color.gray, 5f);
-            Debug.Log("RayCast lanzado");
             if (!Obstaculos(direction))
             {
+                RaycastHit2D hit = Physics2D.Raycast(_myTransform.position, direction.normalized, Mathf.Min(distance, maxDistance), _myLayer);
+                Debug.Log("RayCast lanzado");
+                Debug.DrawRay(_myTransform.position, direction.normalized, Color.blue, 20);
                 if (hit.collider != null)
                 {
                     Debug.Log("Tocado");

@@ -20,5 +20,23 @@ public class BeltMovement : MonoBehaviour
         else if (collision.collider.GetComponent<EnemyThere>() != null)
             collision.rigidbody.velocity += m_direction * Vector2.right * m_speed;
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.GetComponent<GroundCheck>() != null)
+        {
+            //collision.collider.GetComponentInParent<Rigidbody2D>().velocity += m_direction * Vector2.right * m_speed;
+            collision.collider.transform.parent.Translate(m_direction * Vector2.right * m_speed * Time.deltaTime);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.GetComponent<GroundCheck>() != null)
+        {
+            //collision.collider.GetComponentInParent<Rigidbody2D>().velocity += m_direction * Vector2.right * m_speed;
+            collision.collider.transform.parent.Translate(m_direction * Vector2.right * m_speed * Time.deltaTime);
+        }
+    }
     #endregion
 }

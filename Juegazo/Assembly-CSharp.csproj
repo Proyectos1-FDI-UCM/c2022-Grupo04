@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\EnemyLifeComponent.cs" />
     <Compile Include="Assets\Scripts\enemy2\EnemyThere.cs" />
+    <Compile Include="Assets\Scripts\Objects\WorldLimitDown.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGrounded.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBoxDetector.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
