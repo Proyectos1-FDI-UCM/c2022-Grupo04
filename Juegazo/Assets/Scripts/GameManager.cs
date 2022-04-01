@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
     public void InicioNivel()
     {
         Save();
-        _myUIManager.showLevel(m_currentLevel);
+        //_myUIManager.showLevel(m_currentLevel);
         Timeleft = InitialTime;
     }
 

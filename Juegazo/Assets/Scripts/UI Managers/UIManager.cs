@@ -14,9 +14,9 @@ public class UIManager : MonoBehaviour
     private Text _tornillosText;
     [SerializeField]
     private Image _imagentornillo;
-    [SerializeField]
+    /*[SerializeField]
     private GameObject _levelObject;
-    private Text _levelText;
+    private Text _levelText;*/
     [SerializeField]
     private GameObject Progress;
     private Slider _progressBar;
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
     }
     public void showTimer(float Timeleft)
     {
-        _timeText.text = "Time: " + (int)Timeleft;
+        _timeText.text = "" + (int)Timeleft;
     }
     public void showTornillos(int tornillocount)
     {
@@ -120,10 +120,10 @@ public class UIManager : MonoBehaviour
         _progressBar.value = tornillocount;
     }
 
-    public void showLevel(int level)
+    /*public void showLevel(int level)
     {
         _levelText.text = "Level: " + level;
-    }
+    }*/
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -132,7 +132,7 @@ public class UIManager : MonoBehaviour
         _tornillosText = ShowTornillos.GetComponent<Text>();    //mirar si sigue siendo necesario
         _myControls.enabled = false;
         _myPanel.SetActive(false);
-        _levelText = _levelObject.GetComponent<Text>();
+        //_levelText = _levelObject.GetComponent<Text>();
         _progressBar = Progress.GetComponent<Slider>();
     }
 
