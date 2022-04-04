@@ -58,15 +58,18 @@ public class GameManager : MonoBehaviour
     {
         m_level = false;
 
-        Vector2 cameraDirection = _posCamera[m_currentLevel - 1].position - _posCamera[m_currentLevel - 2].position;
-        cameraDirection.Normalize();
-        _cameraMovement.enabled = true;
-        _cameraMovement.SetCameraDirection(cameraDirection);
+        if(m_currentLevel <= 5)
+        {
+            Vector2 cameraDirection = _posCamera[m_currentLevel - 1].position - _posCamera[m_currentLevel - 2].position;
+            cameraDirection.Normalize();
+            _cameraMovement.enabled = true;
+            _cameraMovement.SetCameraDirection(cameraDirection);
 
-        _playerInput.enabled = false;
-        _player.GetComponent<CharacterMovement>().SetDirection(new Vector2(1, 0));
+            _playerInput.enabled = false;
+            _player.GetComponent<CharacterMovement>().SetDirection(new Vector2(1, 0));
+            _myUIManager.showLevels(m_currentLevel);
+        }
 
-        _myUIManager.showLevels(m_currentLevel);
     }
 
     public void OnPlayerDies()
@@ -175,7 +178,9 @@ public class GameManager : MonoBehaviour
         }
         if(m_currentLevel == 6)
         {
+            m_currentLevel = 1;
             m_world++;
+            Save();
             NextWorld();
         }
     }
