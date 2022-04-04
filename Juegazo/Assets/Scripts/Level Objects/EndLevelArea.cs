@@ -9,9 +9,10 @@ public class EndLevelArea : MonoBehaviour
     {
         if(collision.GetComponent<PlayerLifeComponent>() != null)
         {
-            if(GameManager.Instance.m_currentLevel !=6 && GameManager.Instance.m_tornilloCount % 5 == GameManager.Instance.m_currentLevel % 5)
+            if(GameManager.Instance.m_tornilloCount % 5 == GameManager.Instance.m_currentLevel % 5)
             {
                 GameManager.Instance.m_currentLevel++;
+                Debug.Log(GameManager.Instance.m_currentLevel);
                 GameManager.Instance.ChangeLevel();
             }
         }
