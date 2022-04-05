@@ -20,10 +20,7 @@ public class Lift : MonoBehaviour
 
     #endregion
 
-    #region methods
-
-
-    #endregion
+ 
     // Start is called before the first frame update
     void Start()
     {
