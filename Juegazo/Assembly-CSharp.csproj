@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\EnemyLifeComponent.cs" />
-    <Compile Include="Assets\Scripts\enemy2\EnemyThere.cs" />
+    <Compile Include="Assets\Scripts\Enemy2\EnemyThere.cs" />
     <Compile Include="Assets\Scripts\Objects\WorldLimitDown.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyGrounded.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyBoxDetector.cs" />
@@ -75,7 +75,7 @@
     <Compile Include="Assets\Scripts\UI Managers\Quit.cs" />
     <Compile Include="Assets\Scripts\UI Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Damage.cs" />
-    <Compile Include="Assets\Scripts\enemy2\EnemyFollow.cs" />
+    <Compile Include="Assets\Scripts\Enemy2\EnemyFollow.cs" />
     <Compile Include="Assets\Scripts\Objects\ContinuousButton.cs" />
     <Compile Include="Assets\Scripts\Scene Manager\ScenesManager.cs" />
     <Compile Include="Assets\Scripts\Objects\BeltMovement.cs" />
@@ -87,7 +87,7 @@
     <Compile Include="Assets\Scripts\Characters\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Objects\DiscreteButton.cs" />
     <Compile Include="Assets\Scripts\UI Managers\UIManager2.cs" />
-    <Compile Include="Assets\Scripts\enemy2\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy2\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Player\InputManager.cs" />
     <Compile Include="Assets\Scripts\Level Objects\EndLevelArea.cs" />
     <Compile Include="Assets\Scripts\Objects\Trap2.cs" />
