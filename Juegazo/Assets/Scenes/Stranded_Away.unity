@@ -3041,7 +3041,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236285443}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 08de3ff361ea87848b103a4642eef708, type: 3}
@@ -3892,7 +3892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305683324}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.4, y: 13.18, z: 0}
+  m_LocalPosition: {x: -22.98, y: 11.69, z: 0}
   m_LocalScale: {x: 1.1523561, y: 0.93119675, z: 0.93119675}
   m_Children: []
   m_Father: {fileID: 459811348}
@@ -3911,7 +3911,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.2049975, y: -15.034218}
+  m_Offset: {x: 6.432463, y: -13.81805}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3922,7 +3922,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.133235, y: 1.8794785}
+  m_Size: {x: 7.3914347, y: 2.4665947}
   m_EdgeRadius: 0
 --- !u!114 &305683328
 MonoBehaviour:
@@ -7734,7 +7734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470164, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: _movementSpeed
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470165, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: UIManager
@@ -16134,15 +16134,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8275492387229824511, guid: b20eda461e0dc814aa7b2bf7d0f352a9, type: 3}
       propertyPath: m_Color.b
-      value: 0.054901965
+      value: 0.04705883
       objectReference: {fileID: 0}
     - target: {fileID: 8275492387229824511, guid: b20eda461e0dc814aa7b2bf7d0f352a9, type: 3}
       propertyPath: m_Color.g
-      value: 0.027450982
+      value: 0.019607844
       objectReference: {fileID: 0}
     - target: {fileID: 8275492387229824511, guid: b20eda461e0dc814aa7b2bf7d0f352a9, type: 3}
       propertyPath: m_Color.r
-      value: 0.019607844
+      value: 0.011764707
       objectReference: {fileID: 0}
     - target: {fileID: 8646417100111388522, guid: b20eda461e0dc814aa7b2bf7d0f352a9, type: 3}
       propertyPath: m_RootOrder
