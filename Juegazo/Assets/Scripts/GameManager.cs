@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public int m_tornilloCount = 0;
     [HideInInspector]
     public int m_boxesCount = 0;
+    [HideInInspector]
+    public bool m_changeLevel;
     #endregion
 
     #region properties
@@ -56,7 +58,7 @@ public class GameManager : MonoBehaviour
     #region methods
     public void ChangeLevel()
     {
-        m_level = false;
+        m_changeLevel = true;
 
         if(m_currentLevel <= 5)
         {
@@ -123,6 +125,7 @@ public class GameManager : MonoBehaviour
     }
     public void InicioNivel()
     {
+        m_changeLevel = false;
         Save();
         //_myUIManager.showLevel(m_currentLevel);
         Timeleft = InitialTime;

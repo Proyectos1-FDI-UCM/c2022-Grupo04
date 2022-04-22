@@ -13,12 +13,16 @@ public class BeginLevelArea : MonoBehaviour
     #region methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.GetComponent<PlayerLifeComponent>() != null)
+        if (GameManager.Instance.m_changeLevel)
         {
-            collision.GetComponent<InputManager>().enabled = true;
-            GameManager.Instance.InicioNivel();
-            _pared.SetActive(true);
+            if (collision.GetComponent<PlayerLifeComponent>() != null)
+            {
+                collision.GetComponent<InputManager>().enabled = true;
+                GameManager.Instance.InicioNivel();
+                _pared.SetActive(true);
+            }
         }
+        
     }
     #endregion
 }
