@@ -12,6 +12,7 @@ public class EnemyAttack : MonoBehaviour
         if (_inputMovement != null)
         {
             GetComponentInParent<EnemyDirection>().enabled = false;
+            GetComponentInParent<CharacterMovement>().enabled = false;
             GetComponentInParent<EnemyGrounded>().enabled = false;
             GetComponentInParent<EnemyFollow>().enabled = true;    //se desactiva el movimiento random del enemigo para que siga al jugador
         }

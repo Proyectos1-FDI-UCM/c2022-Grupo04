@@ -7,8 +7,6 @@ public class EnemyFollow : MonoBehaviour
     #region references
     private CharacterMovement _myCharacterMovement;
     private Transform _myTransform2;
-    [SerializeField]
-    private GameObject _player;
     private Transform _playerposition;
     #endregion
 
@@ -28,7 +26,7 @@ public class EnemyFollow : MonoBehaviour
     {
         _myCharacterMovement = GetComponent<CharacterMovement>();
         _myTransform2 = transform;
-        _playerposition = _player.transform;
+        _playerposition = GameObject.Find("p_MR1-k").transform;
     }
 
     // Update is called once per frame
