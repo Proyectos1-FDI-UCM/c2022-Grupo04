@@ -3589,20 +3589,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1836038284}
     - target: {fileID: 5832062222358537218, guid: 84befcb7720dc9c44a9e81c1552b61c9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16e4e119891e1f84888d796350c6138a, type: 3}
+    - target: {fileID: 5832062222358537218, guid: 84befcb7720dc9c44a9e81c1552b61c9, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5832062222358537228, guid: 84befcb7720dc9c44a9e81c1552b61c9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.198005
+      value: 12.210203
       objectReference: {fileID: 0}
     - target: {fileID: 5832062222358537228, guid: 84befcb7720dc9c44a9e81c1552b61c9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.7496657
+      value: 4.1797056
       objectReference: {fileID: 0}
     - target: {fileID: 5832062222358537228, guid: 84befcb7720dc9c44a9e81c1552b61c9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.317878
+      value: 3.7997324
       objectReference: {fileID: 0}
     - target: {fileID: 5832062222358537228, guid: 84befcb7720dc9c44a9e81c1552b61c9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -13815,6 +13819,7 @@ MonoBehaviour:
   InitialTime: 120
   m_tornilloCount: 0
   m_boxesCount: 0
+  m_changeLevel: 0
   _posCamera:
   - {fileID: 1503448658}
   - {fileID: 2140702687}
