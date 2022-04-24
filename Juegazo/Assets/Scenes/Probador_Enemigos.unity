@@ -556,6 +556,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &368632456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368632454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900af39a496404d47a1e85f0488f8553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeginPos: {fileID: 639491715}
 --- !u!1 &414230863
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +725,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f784386c5224b604188187a8531cadfb, type: 3}
+--- !u!1 &639491715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639491716}
+  m_Layer: 0
+  m_Name: BeginPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639491716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639491715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.91, y: -4.71, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891271170
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,11 +990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470152, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.4
+      value: 17.04
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470152, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 674856279849470152, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1037,7 +1080,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: de4f116275adc2947a660d43ae150f98, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 674856279849470156, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c0eefb4a70b8eac4188602001a795e0b, type: 3}
 --- !u!1001 &1123611222
 PrefabInstance:
@@ -1204,25 +1248,7 @@ MonoBehaviour:
   m_changeLevel: 0
   _posCamera:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   _beginLevelArea:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   m_currentLevel: 1
   m_level: 0
