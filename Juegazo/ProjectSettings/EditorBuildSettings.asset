@@ -17,7 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PabloScene.unity
     guid: bf7cac02a4d57704cb615d502d844c10
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Probador_Enemigos.unity
     guid: dc4f42c7e286a274d955751cc4b317ad
+  - enabled: 1
+    path: "Assets/Scenes/Probador_Balanc\xEDn.unity"
+    guid: ff15fdaf47775194e8e1ceb243ca76b1
   m_configObjects: {}
