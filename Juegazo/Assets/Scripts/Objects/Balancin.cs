@@ -16,6 +16,7 @@ public class Balancin : MonoBehaviour
         _playerLife = collision.collider.GetComponent<PlayerLifeComponent>();
         if (_playerLife != null)
         {
+            Debug.Log("Balancín");
             a = true;
         }
     }

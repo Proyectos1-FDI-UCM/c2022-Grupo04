@@ -2124,7 +2124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3569275398347892957, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75479364
+      value: 0.7444681
       objectReference: {fileID: 0}
     - target: {fileID: 3569275398347892957, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalScale.y
@@ -2132,7 +2132,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3569275398347892957, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.121
+      value: 0.11584
       objectReference: {fileID: 0}
     - target: {fileID: 3569275398347892957, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2516,11 +2516,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853614996492174917, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3826492
+      value: 2.3664234
       objectReference: {fileID: 0}
     - target: {fileID: 8853614996492174917, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6859
+      value: 1.69401
       objectReference: {fileID: 0}
     - target: {fileID: 8853614996540777344, guid: 620e396b75a84ec459b211a461f6c492, type: 3}
       propertyPath: m_LocalScale.x
@@ -3311,6 +3311,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &240096781 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7352914328653480179, guid: b7869462c52436c4389124fc9c5487a3, type: 3}
+  m_PrefabInstance: {fileID: 1232716153}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &240096786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240096781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598651120b145c040b7237e934fa8535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restarttime: 5
 --- !u!1 &241541339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,7 +5631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f828c90b220113a42918b4fbe97d7eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialTime: 120
+  InitialTime: 180
   m_tornilloCount: 0
   m_boxesCount: 0
   m_changeLevel: 0
@@ -11109,7 +11127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2002307416052661564, guid: f784386c5224b604188187a8531cadfb, type: 3}
       propertyPath: _movementSpeed
-      value: -3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2002307416052661565, guid: f784386c5224b604188187a8531cadfb, type: 3}
       propertyPath: m_Name
