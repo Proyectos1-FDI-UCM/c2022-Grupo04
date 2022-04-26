@@ -9,15 +9,26 @@ public class Balancin : MonoBehaviour
     [SerializeField]
     private float _restarttime;
     private Transform _mytransform;
-   
+  
     private void OnCollisionExit2D(Collision2D collision)
     {
-        PlayerLifeComponent _playerLife;
-        _playerLife = collision.collider.GetComponent<PlayerLifeComponent>();
-        if (_playerLife != null)
+        GroundCheck _ground;
+        _ground = collision.collider.GetComponent<GroundCheck>();
+        if (_ground != null)
         {
             Debug.Log("Balancín");
             a = true;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        GroundCheck _ground;
+        _ground = collision.collider.GetComponent<GroundCheck>();
+        if (_ground != null)
+        {
+            Debug.Log("Balancín");
+            a = false;
+            _elapsedTime = 0;
         }
     }
 
