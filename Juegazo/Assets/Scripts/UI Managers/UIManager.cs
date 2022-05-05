@@ -111,9 +111,52 @@ public class UIManager : MonoBehaviour
         {
             levels.SetActive(false);
         }
-        _levels[levelCount - 1].SetActive(true);
+        switch (levelCount)
+        {
+            case 1:
+                {
+                    _levels[0].SetActive(true);
+                    break;
+                }
+            case 2:
+                {
+                    _levels[0].SetActive(false);
+                    _levels[1].SetActive(true);
+                    break;
+                }
+            case 3:
+                {
+                    _levels[0].SetActive(false);
+                    _levels[1].SetActive(false);
+                    _levels[2].SetActive(true);
+                    break;
+                }
+            case 4:
+                {
+                    _levels[0].SetActive(false);
+                    _levels[1].SetActive(false);
+                    _levels[2].SetActive(false);
+                    _levels[3].SetActive(true);
+                    break;
+                }
+            case 5:
+                {
+                    _levels[0].SetActive(false);
+                    _levels[1].SetActive(false);
+                    _levels[2].SetActive(false);
+                    _levels[3].SetActive(false);
+                    _levels[4].SetActive(true);
+                    break;
+                }
+                /*foreach (GameObject levels in _levels)
+                {
+                    levels.SetActive(false);
+                }
+                _levels[levelCount - 1].SetActive(true);*/
 
+        }
     }
+
     public void showProgress(int tornillocount)
     {
         _progressBar.value = tornillocount;
